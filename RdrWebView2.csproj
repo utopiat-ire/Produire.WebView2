@@ -66,7 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2">
-      <Version>1.0.865-prerelease</Version>
+      <Version>1.0.955-prerelease</Version>
     </PackageReference>
     <PackageReference Include="utopiat.Produire">
       <Version>1.8.1053</Version>
