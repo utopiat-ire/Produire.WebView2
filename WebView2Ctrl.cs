@@ -213,7 +213,7 @@ namespace Produire.EdgeControl
 		public void 更新()
 		{
 			if (!initialized) 初期化();
-			view.Refresh();
+			view.Reload();
 		}
 		/// <summary>ページの読み込みを中止します</summary>
 		[自分を]
