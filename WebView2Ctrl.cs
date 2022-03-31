@@ -356,6 +356,11 @@ namespace Produire.EdgeControl
 		{
 			get { return view.ProductVersion.ToString(); }
 		}
+
+		public WebView2 元実体
+		{
+			get { return view; }
+		}
 		#endregion
 	}
 }
