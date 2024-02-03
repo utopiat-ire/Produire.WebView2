@@ -11,7 +11,7 @@ using Produire;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("utopiat.net")]
 [assembly: AssemblyProduct("Edge(Chromium)ブラウザプラグイン")]
-[assembly: AssemblyCopyright("Copyright(C) 2021-2022 utopiat.net")]
+[assembly: AssemblyCopyright("Copyright(C) 2021-2024 utopiat.net")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -39,4 +39,4 @@ using Produire;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.2.0")]
+[assembly: AssemblyFileVersion("1.0.4.0")]
