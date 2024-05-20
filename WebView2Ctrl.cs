@@ -376,11 +376,75 @@ namespace Produire.EdgeControl
 		{
 			get { return view.ProductVersion.ToString(); }
 		}
+		/// <summary>ウェブビューの設定</summary>
+		/// <returns>□</returns>
+		public CoreWebView2Settings 設定情報
+		{
+			get
+			{
+				if (view.CoreWebView2 == null) 初期化();
+				return view.CoreWebView2.Settings;
+			}
+		}
 
 		public WebView2 元実体
 		{
 			get { return view; }
 		}
 		#endregion
+	}
+	
+	[対応型(typeof(CoreWebView2Settings))]
+	public class Edgeウェブビュー設定情報 : ClassWarpper<CoreWebView2Settings>
+	{
+		/// <summary>デフォルトのコンテキストメニューを表示するかどうか</summary>
+		/// <returns>◎</returns>
+		public bool 標準コンテキストメニュー有効
+		{
+			get => baseObject.AreDefaultContextMenusEnabled;
+			set => baseObject.AreDefaultContextMenusEnabled = value;
+		}
+		/// <summary>コンテキストメニューまたはキーボードショートカットを使用して DevTools (開発者ツール) ウィンドウを開くことができるかどうか</summary>
+		/// <returns>◎</returns>
+		public bool 開発者ツール有効
+		{
+			get => baseObject.AreDevToolsEnabled;
+			set => baseObject.AreDevToolsEnabled = value;
+		}
+		/// <summary>一般的なフォーム情報を保存して自動入力するかどうか</summary>
+		/// <returns>◎</returns>
+		public bool 一般自動入力有効
+		{
+			get => baseObject.IsGeneralAutofillEnabled;
+			set => baseObject.IsGeneralAutofillEnabled = value;
+		}
+		/// <summary>パスワード情報を自動保存するかどうか</summary>
+		/// <returns>◎</returns>
+		public bool パスワード自動保存有効
+		{
+			get => baseObject.IsPasswordAutosaveEnabled;
+			set => baseObject.IsPasswordAutosaveEnabled = value;
+		}
+		/// <summary>ステータスバーを表示するかどうか</summary>
+		/// <returns>◎</returns>
+		public bool ステータスバー有効
+		{
+			get => baseObject.IsStatusBarEnabled;
+			set => baseObject.IsStatusBarEnabled = value;
+		}
+		/// <summary>ズーム操作を行えるかどうか</summary>
+		/// <returns>◎</returns>
+		public bool ズーム操作有効
+		{
+			get => baseObject.IsZoomControlEnabled;
+			set => baseObject.IsZoomControlEnabled = value;
+		}
+		/// <summary></summary>
+		/// <returns>◎</returns>
+		public string ユーザーエージェント
+		{
+			get => baseObject.UserAgent;
+			set => baseObject.UserAgent = value;
+		}
 	}
 }
