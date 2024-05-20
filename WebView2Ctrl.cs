@@ -16,6 +16,7 @@ namespace Produire.EdgeControl
 		{
 			view.Dock = DockStyle.Fill;
 			Controls.Add(view);
+			view.CoreWebView2InitializationCompleted += View_CoreWebView2InitializationCompleted;
 		}
 		protected override void OnLoad(EventArgs e)
 		{
@@ -30,6 +31,25 @@ namespace Produire.EdgeControl
 			view.EnsureCoreWebView2Async();
 			view.NavigationStarting += View_NavigationStarting;
 			view.WebMessageReceived += View_WebMessageReceived;
+		}
+
+		public event EventHandler 初期化が完了した;
+		private void View_CoreWebView2InitializationCompleted(object sender, CoreWebView2InitializationCompletedEventArgs e)
+		{
+			if (初期化が完了した != null) 初期化が完了した(sender, new 初期化が完了した情報(e));
+		}
+		public class 初期化が完了した情報 : ProduireEventArgs<CoreWebView2InitializationCompletedEventArgs>
+		{
+			/// <summary>EventArgsを生成します</summary>
+			public 初期化が完了した情報(CoreWebView2InitializationCompletedEventArgs e)
+				: base(e)
+			{ }
+
+			/// <summary></summary>
+			public bool 成功
+			{
+				get { return e.IsSuccess; }
+			}
 		}
 
 		public event EventHandler ウェブメッセージを受信した;
