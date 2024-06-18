@@ -7,7 +7,7 @@ using Microsoft.Web.WebView2.WinForms;
 
 namespace Produire.EdgeControl
 {
-	[種類(DocUrl = "https://rdr.utopiat.net/docs/plugins/"), メインスレッド]
+	[種類(DocUrl = "https://produ.irelang.jp/docs/plugins/"), メインスレッド]
 	public class Edgeウェブビュー : UserControl, IProduireClass
 	{
 		WebView2 view = new WebView2();
@@ -399,42 +399,42 @@ namespace Produire.EdgeControl
 	{
 		/// <summary>デフォルトのコンテキストメニューを表示するかどうか</summary>
 		/// <returns>◎</returns>
-		public bool 標準コンテキストメニュー有効
+		public bool 標準コンテキストメニュー
 		{
 			get => baseObject.AreDefaultContextMenusEnabled;
 			set => baseObject.AreDefaultContextMenusEnabled = value;
 		}
 		/// <summary>コンテキストメニューまたはキーボードショートカットを使用して DevTools (開発者ツール) ウィンドウを開くことができるかどうか</summary>
 		/// <returns>◎</returns>
-		public bool 開発者ツール有効
+		public bool 開発者ツール
 		{
 			get => baseObject.AreDevToolsEnabled;
 			set => baseObject.AreDevToolsEnabled = value;
 		}
 		/// <summary>一般的なフォーム情報を保存して自動入力するかどうか</summary>
 		/// <returns>◎</returns>
-		public bool 一般自動入力有効
+		public bool 一般自動入力
 		{
 			get => baseObject.IsGeneralAutofillEnabled;
 			set => baseObject.IsGeneralAutofillEnabled = value;
 		}
 		/// <summary>パスワード情報を自動保存するかどうか</summary>
 		/// <returns>◎</returns>
-		public bool パスワード自動保存有効
+		public bool パスワード自動保存
 		{
 			get => baseObject.IsPasswordAutosaveEnabled;
 			set => baseObject.IsPasswordAutosaveEnabled = value;
 		}
 		/// <summary>ステータスバーを表示するかどうか</summary>
 		/// <returns>◎</returns>
-		public bool ステータスバー有効
+		public bool ステータスバー
 		{
 			get => baseObject.IsStatusBarEnabled;
 			set => baseObject.IsStatusBarEnabled = value;
 		}
 		/// <summary>ズーム操作を行えるかどうか</summary>
 		/// <returns>◎</returns>
-		public bool ズーム操作有効
+		public bool ズーム操作
 		{
 			get => baseObject.IsZoomControlEnabled;
 			set => baseObject.IsZoomControlEnabled = value;

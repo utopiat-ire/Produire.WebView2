@@ -66,10 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Web.WebView2">
-      <Version>1.0.2210.55</Version>
+      <Version>1.0.2535.41</Version>
     </PackageReference>
     <PackageReference Include="utopiat.Produire">
-      <Version>1.8.1117</Version>
+      <Version>2.0.1254</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
